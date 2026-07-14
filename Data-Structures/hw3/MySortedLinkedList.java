@@ -7,9 +7,6 @@ public class MySortedLinkedList<T> {
         this.tail = null;
     }
     
-    /***
-     * Assumes valid input (not null).
-     */
     public void insert(ListLink<T> element) {
         if (head == null || head.key() > element.key()) {
         	element.setPrev(null);
@@ -34,9 +31,6 @@ public class MySortedLinkedList<T> {
         }
     }
 
-    /***
-     * Assumes valid input (pointer to link which is currently in the linked-list).
-     */
     public void delete(ListLink<T> element) {
     	if (element == head && element == tail) {
             head = null;
