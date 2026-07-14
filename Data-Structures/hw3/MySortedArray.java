@@ -12,9 +12,6 @@ public class MySortedArray<T> {
         this(DEFAULT_CAPACITY);
     }
 
-    /***
-     * Assumes valid input (not null) and non-full array.
-     */
     public void insert(ArrayElement<T> element) {
     	// Assumes that insert is always called when there is a place in the array to insert.
         int index = findInsertionIndex(element);
@@ -32,10 +29,7 @@ public class MySortedArray<T> {
         size = size + 1;
     }
 
-    /***
-     * Assumes valid input (pointer to element which is currently in the array).
-     */
-    public void delete(ArrayElement<T> element) {
+     public void delete(ArrayElement<T> element) {
     	for (int i = element.index(); i < size - 1; i = i + 1) {
     		array[i] = array[i + 1];
     		array[i].setIndex(i);
