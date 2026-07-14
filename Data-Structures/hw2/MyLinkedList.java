@@ -7,9 +7,6 @@ public class MyLinkedList<T> {
         this.tail = null;
     }
     
-    /***
-     * Implement the following method.
-     */
     public void reverse() {
         Link<T> temp;
         Link<T> current = head;
@@ -26,9 +23,6 @@ public class MyLinkedList<T> {
         tail=temp;
     }
     
-    /***
-     * Assumes valid input (not null).
-     */
     public void insert(Link<T> element) {
     	element.setNext(head);
     	element.setPrev(null);    
@@ -39,9 +33,6 @@ public class MyLinkedList<T> {
     	head = element; 	
     }
     
-    /***
-     * Assumes valid input (pointer to link which is currentrently in the linked-list).
-     */
     public void delete(Link<T> element) {
     	if (element == head && element == tail) {
             head = null;
