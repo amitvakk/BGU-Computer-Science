@@ -5,9 +5,6 @@ public class MyAVLTree<T> {
     	this.root = null;
     }
     
-    /***
-     * Implement the following method.
-     */
     public int depthOfMin() {
         if (this.root == null){
             return -1;
@@ -21,11 +18,6 @@ public class MyAVLTree<T> {
         return depth;
     }
     
-    
-    /***
-     * Insert a node into the tree.
-     * Assumes valid input (not null).
-     */
     public void insert(TreeNode<T> newNode) {    	
     	TreeNode<T> y = null;			// the variable name "y" is consistent with lecture notes
     	TreeNode<T> x = this.root;		// the variable name "x" is consistent with lecture notes
@@ -44,14 +36,7 @@ public class MyAVLTree<T> {
     	else
     		y.setRight(newNode);
     	
-    	/*
-    	 * going up the tree from the inserted leaf until one of the following:
-    	 * - the root
-    	 * - the first node its height did not change due to the insertion
-    	 * - the first node which is unbalanced
-    	 * update the heights of the ancestors of the inserted leaf,
-    	 * check if any ancestor became unbalanced and balance it
-    	 */    	
+       	
     	boolean foundUnBalancedNode = false;
     	boolean foundUnChangedHeight = false;
     	while(y != null & !foundUnBalancedNode & !foundUnChangedHeight) { 
@@ -90,10 +75,7 @@ public class MyAVLTree<T> {
     	}
     }
  
-    /***
-     * Delete a node from the tree.
-     * Assumes valid input (pointer to node which is currently in the tree).
-     */
+  
     public void delete(TreeNode<T> nodeToDelete) {
 
     	// the deleted node has two children	
@@ -134,14 +116,7 @@ public class MyAVLTree<T> {
     	        else
     		        root = nodeToDelete.getLeft();
             }
-        	
-           /*
-        	* going up the tree from the deleted node until one of the following:
-        	* - the root
-        	* - the first node its height did not change due to the insertion
-        	* update the heights of the ancestors of the inserted leaf,
-        	* check if any ancestor became unbalanced and balance it
-        	*/    	
+         	
         	boolean foundUnChangedHeight = false;
         	while(y != null & !foundUnChangedHeight) { 
         		TreeNode<T> nextAncestor = y.getParent();
