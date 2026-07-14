@@ -1,14 +1,8 @@
-/**
- * @param <T> The type of the satellite data of the elements in the dynamic-set.
- */
 public class MyDynamicSet<T> {
 
 	private MySortedArray<T> dynamicSet;
 	private static final int DEFAULT_CAPACITY = 20;
-
-	/***
-     * The constructor should initiate an empty dynamic-set.
-     */
+	
 	public MyDynamicSet() {
 		this.dynamicSet = new MySortedArray<T>(DEFAULT_CAPACITY);
 	}
