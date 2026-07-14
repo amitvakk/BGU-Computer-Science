@@ -1,7 +1,3 @@
-/**
- * This class represents a product,
- * with id and quality.
- */
 public class Product {
 	private int id;
 	private int quality;
