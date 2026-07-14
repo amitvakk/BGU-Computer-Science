@@ -7,9 +7,6 @@ public class MyLinkedList<T> {
         this.tail = null;
     }
     
-    /***
-     * Implement the following method.
-     */
     public void reverse() {
         ListLink<T> current = this.head;
         this.head = this.tail;
@@ -23,10 +20,7 @@ public class MyLinkedList<T> {
         }
     }
     
-    /***
-     * Assumes valid input (not null).
-     */
-    public void insert(ListLink<T> element) {
+	public void insert(ListLink<T> element) {
     	element.setNext(head);
     	element.setPrev(null);    
     	if (head != null)
@@ -36,10 +30,7 @@ public class MyLinkedList<T> {
     	head = element; 	
     }
     
-    /***
-     * Assumes valid input (pointer to link which is currentrently in the linked-list).
-     */
-    public void delete(ListLink<T> element) {
+	public void delete(ListLink<T> element) {
     	if (element == head && element == tail) {
             head = null;
             tail = null;
