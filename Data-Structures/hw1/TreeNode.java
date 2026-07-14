@@ -1,22 +1,8 @@
-/**
- * This class represents a specific element in a specific data structure: 
- * a node in an AVL-tree.
- * @param <T> The type of the satellite data.
- */
 public class TreeNode<T> extends Element<T> {
-	/*
-     * You may add any fields that you wish to add.
-     * Remember that the use of built-in Java classes is not allowed,
-     * the only variables types you can use are: 
-     * 	-	the given classes in the assignment
-     * 	-	basic arrays
-     * 	-	primitive variables
-     */
 	private TreeNode<T> left;
 	private TreeNode<T> right;
 	private TreeNode<T> p;		//parent
 	private int height;
-	//added for answer 4.1
 	private ListLink<T> linkPointer;
 
 	public TreeNode(int key, T satelliteData) {
@@ -51,7 +37,6 @@ public class TreeNode<T> extends Element<T> {
 		return this.height;
 	}
 
-	//added for answer 4.1
 	public ListLink<T> getLinkPointer(){
 		return this.linkPointer;
 	}
