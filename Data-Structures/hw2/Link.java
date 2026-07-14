@@ -1,17 +1,4 @@
-/**
- * This class represents a specific element in a specific data structure: 
- * a link in a linked-list.
- * @param <T> The type of the satellite data.
- */
 public class Link<T> extends Element<T> {
-	/*
-     * You may add any fields that you wish to add.
-     * Remember that the use of built-in Java classes is not allowed,
-     * the only variables types you can use are: 
-     * 	-	the given classes in the assignment
-     * 	-	basic arrays
-     * 	-	primitive variables
-     */
 	private Link<T> next;
 	private Link<T> prev;
 	
