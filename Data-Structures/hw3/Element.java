@@ -1,14 +1,7 @@
-/**
- * This class represents a general element in a general data structure, 
- * with key and satellite data.
- * @param <T> The type of the satellite data.
- */
 public class Element<T> {	
-//--------------------fields-------------------------------------------
 	private int key;
 	private T satelliteData;
 
-//--------------------constructors-------------------------------------
 	public Element(int key, T satelliteData) {
 		this.key = key;
 		this.satelliteData = satelliteData;
@@ -22,7 +15,6 @@ public class Element<T> {
 		this(element.key(), element.satelliteData());
 	}
 
-//--------------------methods-------------------------------------
 	public int key() {
 		return this.key;
 	}
