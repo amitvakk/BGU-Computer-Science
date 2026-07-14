@@ -1,13 +1,5 @@
 
 public class MySecondDataStructure {
-	/*
-     * You may add any fields that you wish to add.
-     * Remember that the use of built-in Java classes is not allowed,
-     * the only variables types you can use are: 
-     * 	-	the given classes in the assignment
-     * 	-	basic arrays
-     * 	-	primitive variables
-     */
 	private MyArray<Product> allProducts;
 	private Product mostExpensive;
 	private int[] raisePerQuality;
@@ -15,11 +7,6 @@ public class MySecondDataStructure {
 	private int totalQuality;
 	private Product[] mostExpensivePerQuality;
 
-
-	/***
-     * This function is the Init function.
-	 * @param N The maximum number of elements in the data structure at each time.
-     */
 	public MySecondDataStructure(int N) {
 		this.allProducts = new MyArray<>(N);
 		this.mostExpensive = null;
