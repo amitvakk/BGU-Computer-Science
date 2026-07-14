@@ -12,9 +12,6 @@ public class MyArray<T> {
         this(DEFAULT_CAPACITY);
     }   
     
-    /***
-     * Implement the following method.
-     */
     public void reverse() {
         int left = 0;
         int right = size() - 1 ;
@@ -27,19 +24,12 @@ public class MyArray<T> {
         }
     }
 
-    /***
-     * Assumes valid input (not null) and non-full array.
-     */
     public void insert(ArrayElement<T> element) {
-        // Assumes that insert is always called when there is a place in the array to insert.    	
         element.setIndex(size);
         array[size] = element;
         size = size + 1;
     }
 
-    /***
-     * Assumes valid input (pointer to element which is currently in the array).
-     */
     public void delete(ArrayElement<T> element) {
     	array[size - 1].setIndex(element.index());
     	array[element.index()] = array[size - 1];
