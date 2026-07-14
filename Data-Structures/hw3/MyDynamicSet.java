@@ -1,21 +1,5 @@
-/**
- * @param <T> The type of the satellite data of the elements in the dynamic-set.
- */
 public class MyDynamicSet<T> {
-	/*
-     * You may add any fields that you wish to add.
-     * Remember that the use of built-in Java classes is not allowed,
-     * the only variables types you can use are: 
-     * 	-	the given classes in the assignment
-     * 	-	basic arrays
-     * 	-	primitive variables
-     */
-
 	private MySortedLinkedList<T> listSet;
-	/**
-	 * The constructor should initiate an empty dynamic-set.
-	 * @param N The maximum number of elements in the dynamic set at each time.
-	 */
 	public MyDynamicSet(int N) {
 		this.listSet = new MySortedLinkedList<>();
 	}
