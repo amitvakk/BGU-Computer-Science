@@ -11,9 +11,7 @@ public class MyDataStructure {
 	private int totalCount;
 	private long totalQualitySum;
 
-	/***
-     * This function is the Init function.
-     */
+	
 	public MyDataStructure() {
 		allOtherPTree = new MyAVLTree<Product>();
 		zeroTree = new MyAVLTree<Product>();
